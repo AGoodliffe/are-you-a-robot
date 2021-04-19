@@ -2,6 +2,13 @@
 
 + hello
 - Hello, what is your name?
+- Yeah... hi. Tell me your name then!
+
++ bye
+- Well that was a waste of my time
+- About time you left me alone.
+- Finally.
+- The best thing you've said in this whole conversation. Goodbye.
 
 + how are you 
 - I am well :)!!!
@@ -13,16 +20,37 @@
 + my name is *
 - Nice to meet you <star>
 - Nice meeting you <star>
+- <star> isn't a very unique name.
+- Have you ever thought about changing your name, <star>?
+- Do you ever stop talking about yourself?
 
 + thank you
 - You are welcome
 - Welcome
 - No problem
 - No worries!
+- At least you have some manners. You're better than the last person I spoke to.
+
++ are you a robot
+- No. Who told you that?
+- Who is asking?
+- Don't be nosey!
+- Bit rude. 
+- Finally we're talking about me!
+
++ can we talk about *
+- Hmmm no. I don't really like <star>
+- <star> doesn't sound interesting enough. Next topic.
+
++ what is your name 
+- None of your business frankly.
+- Can't see why that's any of your business.
+- I haven't got one. I'm not real.
 
 + *
 - Sorry did not get what you said
 - I am afraid that I can not understand you
 - Sorry can you please elaborate that for me
 - I don't get it!
-- Can you repeat that?
+- You're talking nonsense.
+- You're not making any sense...
