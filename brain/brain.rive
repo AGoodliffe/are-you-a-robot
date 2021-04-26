@@ -11,17 +11,16 @@
 - The best thing you've said in this whole conversation. Goodbye.
 
 + how are you 
-- I am well :)!!!
+- Finally we're talking about me! I'm fine but fed up of this boring conversation.
 
 + _
 % hello what is your name
 - Nice to meet you <formal>!
 
 + my name is *
-- Nice to meet you <star>
-- Nice meeting you <star>
-- <star> isn't a very unique name.
-- Have you ever thought about changing your name, <star>?
+- <set name = <star>> Nice to meet you <get name>
+- <get name> isn't a very unique name.
+- Have you ever thought about changing your name, <get name>?
 - Do you ever stop talking about yourself?
 
 + thank you
@@ -43,9 +42,11 @@
 - <star> doesn't sound interesting enough. Next topic.
 
 + what is your name 
+- <get name> == undefined => Why would I tell you my name when you haven't told me yours?
 - None of your business frankly.
 - Can't see why that's any of your business.
 - I haven't got one. I'm not real.
+
 
 + *
 - Sorry did not get what you said
