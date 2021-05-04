@@ -77,3 +77,37 @@
 - I don't get it!
 - You're talking nonsense.
 - You're not making any sense...
+
+> topic green
+
+    + hello
+    - how are you? :-) x xx x
+
+    + [*] weather [*]
+    - Ok, let's talk about the weather <topic=green_weather>
+
+< topic
+
+> topic green_weather
+
+    + 
+
+    + *
+    - sorry i don't understand...
+
+< topic
+
+> topic red
+
+    + [*] sorry [*]
+    - Ok, you're good now... <topic=green>
+
+    + [*] weather [*]
+    - goddam hate the weather... <topic=red_weather>
+
+< topic
+
+> topic red_weather
+
+
+< topic
