@@ -1,10 +1,10 @@
 ! version = 2.0
 
 // We use this to force the traffic light to be a certain colour
-+ set light to *
-+ light top *
-+ light *
-- <set light=<star>>The traffic light is <get light>
+// + set light to *
+// + light top *
+// + light *
+// - <set light=<star>>The traffic light is <get light>
 
 //---------------------------------------------------------------------
 // Testing stuff (delete this later)
@@ -26,54 +26,74 @@
 
 
 
-+ how are you 
-- Finally we're talking about me! I'm fine but fed up of this boring conversation.
+// + how are you 
+// - Finally we're talking about me! I'm fine but fed up of this boring conversation.
 
-+ _
-% hello what is your name
-- Nice to meet you <formal>!
+// + _
+// % hello what is your name
+// - Nice to meet you <formal>!
 
-+ my name is *
-- <set name = <star>> Nice to meet you, <get name>
-// - <set name = <star>> <get name> isn't a very unique name.
-// - <set name = <star>> Have you ever thought about changing your name, <get name>?
-// - <set name = <star>> Do you ever stop talking about yourself?
+// + my name is *
+// - <set name = <star>> Nice to meet you, <get name>
+// // - <set name = <star>> <get name> isn't a very unique name.
+// // - <set name = <star>> Have you ever thought about changing your name, <get name>?
+// // - <set name = <star>> Do you ever stop talking about yourself?
 
-+ thank you
-- You are welcome
-- Welcome
-- No problem
-- No worries!
-- At least you have some manners. You're better than the last person I spoke to.
+// + thank you
+// - You are welcome
+// - Welcome
+// - No problem
+// - No worries!
+// - At least you have some manners. You're better than the last person I spoke to.
 
-+ are you a robot
-- No. Who told you that?
-- Who is asking?
-- Don't be nosey!
-- Bit rude. 
-- Finally we're talking about me!
+// + are you a robot
+// - No. Who told you that?
+// - Who is asking?
+// - Don't be nosey!
+// - Bit rude. 
+// - Finally we're talking about me!
 
-+ can we talk about *
++ (do you like | can we talk about )
 - Hmmm no. I don't really like <star>
 - <star> doesn't sound interesting enough. Next topic.
 
-+ what is your name 
-- <get name> == undefined => Why would I tell you my name when you haven't told me yours?
-- None of your business frankly.
-- Can't see why that's any of your business.
-- I haven't got one. I'm not real.
+// + what is your name 
+// - <get name> == undefined => Why would I tell you my name when you haven't told me yours?
+// - None of your business frankly.
+// - Can't see why that's any of your business.
+// - I haven't got one. I'm not real.
 
-+ why are you so angry
-+ why do you sound so rude
-- THEN DONT TALK TO ME!
+// + why are you so angry
+// + why do you sound so rude
+// - THEN DONT TALK TO ME!
 
-+ *
-- Sorry did not get what you said
-- I am afraid that I can not understand you
-- Sorry can you please elaborate that for me
-- I don't get it!
-- You're talking nonsense.
-- You're not making any sense...
++ [*] (hello|hi|hey|whats up|heya|hiya) [*]
+- First things first. Have you ever jaywalked? {topic=jaywalking_initialising}
+
++ red
+- This is sending you to the red topic {topic=red}
+
++ green
+- This is sending you to the green topic {topic=green}
+// - Sorry did not get what you said
+// - I am afraid that I can not understand you
+// - Sorry can you please elaborate that for me
+// - I don't get it!
+// - You're talking nonsense.
+// - You're not making any sense...
+
+> topic jaywalking_initialising
+
+    + [*] (yes|yeah|yup|do) [*]
+    - You are the bane of my excistence. {topic=red}
+
+    + [*] (no|nope|never) [*]
+    - Wow! I'm so happy you said that! {topic=green}
+    
+    + [*] (sometimes|maybe|occasionally) [*]
+    - Hmm... maybe you shouldn't do that... {topic=orange}
+
+< topic
 
 > topic green 
 
@@ -86,7 +106,12 @@
     - Nice to talk to you! Make sure you look both ways as you leave!
     
     + [*] weather [*]
-    - Ok, let's talk about the weather <topic=green_weather>
+    - Ok, let's talk about the weather {topic=green_weather}
+    // 
+
+    + [*] hobbies [*]
+    - Well, I like bird watching!
+    - I play this game where I count cars. Sometimes I count colours and othertimes I look at the make of the car. 
 
     + *
     - Sorry did not get what you said
@@ -96,16 +121,25 @@
     - You're talking nonsense.
     - You're not making any sense...
 
+    + are you a robot
+    - That's a really interesting question! I suppose I'm programmed so my lights change.
+    - It's funny really... I'm programmed to be a subversive chatbot but I'm based on such a useful object.
+
 < topic
 
 > topic green_weather
-
-    + 
 
     + *
     - sorry i don't understand...
 
 < topic
+
+< topic green_hobbies
+
+    + *
+    - Spring is my favourite because I get to bird watch. It's my favourite pass time. Do you have any hobbies?
+
+> topic
 
 > topic orange 
 
@@ -116,10 +150,35 @@
    - Oh ok... Bye then!
    - See you around.
 
+   + thank you
+    - You are welcome
+    - Welcome
+    - No problem
+    - No worries!
+    - At least you have some manners. You're better than the last person I spoke to.
+
+    + [*] weather [*]
+    - Ok, let's talk about the weather {topic=orange_weather}
+   
+   + are you a robot
+    - I'm just a traffic light!
+    - I guess some people would say I am!
+
     + *
     - I don't get it!
 
 < topic
+
+> topic orange_weather
+
+< topic
+
+< topic orange_hobbies
+
+    + *
+    - orange response
+
+> topic
 
 > topic red
 
@@ -133,11 +192,27 @@
     - Finally.
     - The best thing you've said in this whole conversation. Goodbye.
 
+    + thank you
+    - Hmmm. At least you have some manners. You're better than the last person I spoke to. {topic=orange}
+
     + [*] sorry [*]
-    - Ok, you're good now... <topic=green>
+    - Ok, you're good now... just stop pushing my buttons. {topic=green}
+
+    + are you a robot
+    - No. Who told you that?
+    - Who is asking?
+    - Don't be nosey!
+    - Bit rude. 
+    - Finally we're talking about me! {topic=orange}
 
     + [*] weather [*]
-    - goddam hate the weather... <topic=red_weather>
+    - Goddamn hate the weather... {topic=red_weather}
+    - Rain sometimes makes me short circuit. It gives me a headache.
+    - I like the winter I guess. It's fun to see people slipping and falling.
+
+    + can we talk about *
+    - Hmmm no. I don't really like <star>
+    - <star> doesn't sound interesting enough. Next topic.
 
 < topic
 
@@ -145,3 +220,10 @@
 
 
 < topic
+
+< topic red_hobbies
+
+    + *
+    - orange response
+
+> topic
