@@ -107,7 +107,6 @@
     
     + [*] weather [*]
     - Ok, let's talk about the weather {topic=green_weather}
-    // 
 
     + [*] hobbies [*]
     - Well, I like bird watching!
@@ -141,10 +140,10 @@
 > topic green_transport
 
     + (yes|no|sometimes) 
-    - Sometimes cyclists don't listen too me...
+    - Sometimes cyclists don't listen to me...
 
     + * 
-    % sometimes cyclists dont listen to me
+    % sometimes cyclists do not listen to me
     - I'm here for a reason! It's not safe to ignore me like that. {topic=red}
 
 < topic 
