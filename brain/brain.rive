@@ -35,9 +35,9 @@
 
 + my name is *
 - <set name = <star>> Nice to meet you <get name>
-- <set name = <star>> <get name> isn't a very unique name.
-- <set name = <star>> Have you ever thought about changing your name, <get name>?
-- <set name = <star>> Do you ever stop talking about yourself?
+// - <set name = <star>> <get name> isn't a very unique name.
+// - <set name = <star>> Have you ever thought about changing your name, <get name>?
+// - <set name = <star>> Do you ever stop talking about yourself?
 
 + thank you
 - You are welcome
