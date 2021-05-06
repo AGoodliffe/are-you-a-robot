@@ -9,15 +9,15 @@
 //---------------------------------------------------------------------
 // Testing stuff (delete this later)
 
-+ test
-* <get light> == red       => red answer
-* <get light> == green     => green answer
-* <get light> == yellow    => yellow answer
-* <get light> == undefined => no specific answer
-- some other answer
+// + test
+// * <get light> == red       => red answer
+// * <get light> == green     => green answer
+// * <get light> == yellow    => yellow answer
+// * <get light> == undefined => no specific answer
+// - some other answer
 
-+ * ok *
-* <get light> == green => <set light = yellow>I feel less happy about this now
+// + * ok *
+// * <get light> == green => <set light = yellow>I feel less happy about this now
 
 //---------------------------------------------------------------------
 // Real script
@@ -77,12 +77,12 @@
 
 > topic green 
 
-    + * hello *|* hi *|* hey *|* what's up *|* heya *|* hiya *
-    - how are you? :-) x xx x
-    - how you doing these days?
+    + [*] (hello|hi|hey|whats up|heya|hiya) [*]
+    - How are you? :-) x xx x
+    - How you doing these days?
     - Hello, what is your name?
 
-    + * bye *|*goodbye*|*see you*
+    + [*] (bye|goodbye|see you) [*]
     - Nice to talk to you! Make sure you look both ways as you leave!
     
     + [*] weather [*]
@@ -101,21 +101,22 @@
 
 > topic orange 
 
-    + * hello *|* hi *|* hey *|* what's up *|* heya *|* hiya *
+    + [*] (hello|hi|hey|whats up|heya|hiya) [*]
     - Yeah... hi. Tell me your name then!
 
-    + * bye *|*goodbye*|*see you*
-    - Oh ok... Bye then!
+   + [*] (bye|goodbye|see you) [*]    
+   - Oh ok... Bye then!
+   - See you around.
 
 < topic
 
 > topic red
 
-    + * hello *|* hi *|* hey *|* what's up *|* heya *|* hiya *
+    + [*] (hello|hi|hey|whats up|heya|hiya) [*]
     - Who are you? How did you find me?
     - I just want some peace and quiet... Why are you here?
 
-    + * bye *|*goodbye*|*see you*
+    + [*] (bye|goodbye|see you) [*]
     - Well that was a waste of my time.
     - About time you left me alone.
     - Finally.
