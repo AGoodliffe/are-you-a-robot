@@ -22,15 +22,9 @@
 //---------------------------------------------------------------------
 // Real script
 
-+ hello
-- Hello, what is your name?
-- Yeah... hi. Tell me your name then!
 
-+ bye
-- Well that was a waste of my time
-- About time you left me alone.
-- Finally.
-- The best thing you've said in this whole conversation. Goodbye.
+
+
 
 + how are you 
 - Finally we're talking about me! I'm fine but fed up of this boring conversation.
@@ -41,9 +35,9 @@
 
 + my name is *
 - <set name = <star>> Nice to meet you <get name>
-- <get name> isn't a very unique name.
-- Have you ever thought about changing your name, <get name>?
-- Do you ever stop talking about yourself?
+- <set name = <star>> <get name> isn't a very unique name.
+- <set name = <star>> Have you ever thought about changing your name, <get name>?
+- <set name = <star>> Do you ever stop talking about yourself?
 
 + thank you
 - You are welcome
@@ -69,9 +63,9 @@
 - Can't see why that's any of your business.
 - I haven't got one. I'm not real.
 
-+ Why are you so angry?
-+ Why you sound so rude?
-- THAN DONT TALK TO ME!
++ why are you so angry
++ why do you sound so rude
+- THEN DONT TALK TO ME!
 
 + *
 - Sorry did not get what you said
@@ -81,11 +75,16 @@
 - You're talking nonsense.
 - You're not making any sense...
 
-> topic green
+> topic green 
 
-    + hello
+    + * hello *|* hi *|* hey *|* what's up *|* heya *|* hiya *
     - how are you? :-) x xx x
     - how you doing these days?
+    - Hello, what is your name?
+
+    + * bye *|*goodbye*|*see you*
+    - Nice to talk to you! Make sure you look both ways as you leave!
+    
     + [*] weather [*]
     - Ok, let's talk about the weather <topic=green_weather>
 
@@ -100,7 +99,27 @@
 
 < topic
 
+> topic orange 
+
+    + * hello *|* hi *|* hey *|* what's up *|* heya *|* hiya *
+    - Yeah... hi. Tell me your name then!
+
+    + * bye *|*goodbye*|*see you*
+    - Oh ok... Bye then!
+
+< topic
+
 > topic red
+
+    + * hello *|* hi *|* hey *|* what's up *|* heya *|* hiya *
+    - Who are you? How did you find me?
+    - I just want some peace and quiet... Why are you here?
+
+    + * bye *|*goodbye*|*see you*
+    - Well that was a waste of my time.
+    - About time you left me alone.
+    - Finally.
+    - The best thing you've said in this whole conversation. Goodbye.
 
     + [*] sorry [*]
     - Ok, you're good now... <topic=green>
