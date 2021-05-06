@@ -53,9 +53,9 @@
 // - Bit rude. 
 // - Finally we're talking about me!
 
-+ (do you like | can we talk about )
-- Hmmm no. I don't really like <star>
-- <star> doesn't sound interesting enough. Next topic.
+// + (do you like | can we talk about )
+// - Hmmm no. I don't really like <star>
+// - <star> doesn't sound interesting enough. Next topic.
 
 // + what is your name 
 // - <get name> == undefined => Why would I tell you my name when you haven't told me yours?
@@ -125,6 +125,10 @@
     - That's a really interesting question! I suppose I'm programmed so my lights change.
     - It's funny really... I'm programmed to be a subversive chatbot but I'm based on such a useful object.
 
+    + (do you like|can we talk about) *
+    // - Oh my gosh! I love <star2>
+    - <star2>! So cool! I love bikes too! Do you cycle? {topic=green_transport}
+
 < topic
 
 > topic green_weather
@@ -134,12 +138,24 @@
 
 < topic
 
+> topic green_transport
+
+    + (yes|no|sometimes) 
+    - Sometimes cyclists don't listen too me...
+
+    + * 
+    % sometimes cyclists dont listen to me
+    - I'm here for a reason! It's not safe to ignore me like that. {topic=red}
+
+< topic 
+
 < topic green_hobbies
 
     + *
     - Spring is my favourite because I get to bird watch. It's my favourite pass time. Do you have any hobbies?
 
 > topic
+
 
 > topic orange 
 
@@ -164,6 +180,10 @@
     - I'm just a traffic light!
     - I guess some people would say I am!
 
+    + (do you like|can we talk about) *
+    - Sometimes I like <star2>
+    - Not really feeling <star2>. Why don't we talk about transport?
+
     + *
     - I don't get it!
 
@@ -179,6 +199,12 @@
     - orange response
 
 > topic
+
+< topic orange_transport
+
+    + *
+
+> topic 
 
 > topic red
 
@@ -210,9 +236,9 @@
     - Rain sometimes makes me short circuit. It gives me a headache.
     - I like the winter I guess. It's fun to see people slipping and falling.
 
-    + can we talk about *
-    - Hmmm no. I don't really like <star>
-    - <star> doesn't sound interesting enough. Next topic.
+    + (do you like|can we talk about) *
+    - Hmmm no. I don't really like <star2>
+    - <star2> doesn't sound interesting enough. Next topic.
 
 < topic
 
@@ -227,3 +253,9 @@
     - orange response
 
 > topic
+
+< topic red_transport
+
+
+
+> topic 
