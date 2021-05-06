@@ -34,7 +34,7 @@
 - Nice to meet you <formal>!
 
 + my name is *
-- <set name = <star>> Nice to meet you <get name>
+- <set name = <star>> Nice to meet you, <get name>
 // - <set name = <star>> <get name> isn't a very unique name.
 // - <set name = <star>> Have you ever thought about changing your name, <get name>?
 // - <set name = <star>> Do you ever stop talking about yourself?
@@ -88,6 +88,14 @@
     + [*] weather [*]
     - Ok, let's talk about the weather <topic=green_weather>
 
+    + *
+    - Sorry did not get what you said
+    - I am afraid that I can not understand you
+    - Sorry can you please elaborate that for me
+    - I don't get it!
+    - You're talking nonsense.
+    - You're not making any sense...
+
 < topic
 
 > topic green_weather
@@ -107,6 +115,9 @@
    + [*] (bye|goodbye|see you) [*]    
    - Oh ok... Bye then!
    - See you around.
+
+    + *
+    - I don't get it!
 
 < topic
 
