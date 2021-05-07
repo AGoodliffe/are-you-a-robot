@@ -113,7 +113,7 @@
     - I play this game where I count cars. Sometimes I count colours and othertimes I look at the make of the car. 
 
     + *
-    - Sorry did not get what you said
+    - Sorry I did not get what you said there
     - I am afraid that I can not understand you
     - Sorry can you please elaborate that for me
     - I don't get it!
@@ -185,6 +185,7 @@
 
     + *
     - I don't get it!
+    - Huh?
 
 < topic
 
@@ -210,6 +211,7 @@
     + [*] (hello|hi|hey|whats up|heya|hiya) [*]
     - Who are you? How did you find me?
     - I just want some peace and quiet... Why are you here?
+    - You better have something good to say for disturbing me!
 
     + [*] (bye|goodbye|see you) [*]
     - Well that was a waste of my time.
