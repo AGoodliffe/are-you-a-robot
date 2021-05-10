@@ -82,6 +82,21 @@
 // - You're talking nonsense.
 // - You're not making any sense...
 
++ orange ped
+- Sending you to orange pedestrians {topic=orange_pedestrians}
+
++ green bike
+- Sending you to green bike {topic=green_cyclists}
+
++ red weather
+- Sending you to red weather topic {topic=red_weather}
+
++ green van
+- Sending you to green vandalism {topic=green_vandalism}
+
++ green car
+- sending you to green cars topic {topic=green_cars}
+
 > topic jaywalking_initialising
 
     + [*] (yes|yeah|yup|do) [*]
@@ -110,48 +125,113 @@
 
     + [*] hobbies [*]
     - Well, I like bird watching!
-    - I play this game where I count cars. Sometimes I count colours and othertimes I look at the make of the car. 
+     
 
     + *
-    - Sorry I did not get what you said there
     - I am afraid that I can not understand you
     - Sorry can you please elaborate that for me
     - I don't get it!
-    - You're talking nonsense.
-    - You're not making any sense...
-
+    
     + are you a robot
     - That's a really interesting question! I suppose I'm programmed so my lights change.
     - It's funny really... I'm programmed to be a subversive chatbot but I'm based on such a useful object.
 
     + (do you like|can we talk about) *
     // - Oh my gosh! I love <star2>
-    - <star2>! So cool! I love bikes too! Do you cycle? {topic=green_transport}
+    - <star2>! So cool! I love bikes too! Do you cycle? {topic=green_cyclists}
 
 < topic
 
 > topic green_weather
 
     + *
-    - sorry i don't understand...
+    - I'm very good at predicting the weather! {topic=green}
 
 < topic
 
-> topic green_transport
+> topic green_cyclists
 
-    + (yes|no|sometimes) 
-    - Sometimes cyclists don't listen to me...
+    + [*] (yes|no|sometimes|yeah) [*]
+    - Sometimes cyclists don't listen to me... 
 
     + * 
     % sometimes cyclists do not listen to me
     - I'm here for a reason! It's not safe to ignore me like that. {topic=red}
 
+    + *
+    - I am afraid that I can not understand you
+    - Sorry can you please elaborate that for me
+    - I don't get it!
+
 < topic 
+
+> topic green_pedestrians 
+
+    + *
+    - I like pedestrians. They usually pay attention to my signals. Particularly the old ones.
+
+    + *
+    % i like pedestrians they usually pay attention to my signals particularly the old ones
+    - I love to people watch. Do you?
+
+    + *
+    % i love to people watch do you
+    - So many interesting people walk past me. I get to look at their clothes and listen to their conversations.
+
+< topic
+
+> topic green_cars
+
+    + *
+    - I like classic cars. 
+
+    + *
+    % i like classic cars 
+    - They're usually so cute and dinky. My favourite is the Jaguar E-Type. 
+
+    + *
+    % they are usually so cute and dinky my favourite is the jaguar etype
+    - What's your favourite classic car?
+
+    + *
+    % what is your favourite classic car
+    - Cool! I like Volkswagen Beetles too.
+
+< topic
+
+> topic green_other_traffic_lights
+
+    + *
+    - Imitation is the sincerest form of flattery so I love it when I can see the other traffic lights copying me! 
+    
+< topic
+
+> topic green_vandalism
+
+    + *
+    - I like all the stickers that get put on me. It makes me feel pretty.
+
+    + *
+    % i like all the stickers that get put on me it makes me feel pretty
+    - Do you think I'm pretty?
+
+    + [*] (yes|yeah|yep|yup) [*]
+    - Awwww! You're too sweet! {topic=green}
+    
+    + [*] (no|nope|nah) [*]
+    - How dare you. That's so nasty. {topic=red}    
+
+< topic
+
 
 < topic green_hobbies
 
     + *
     - Spring is my favourite because I get to bird watch. It's my favourite pass time. Do you have any hobbies?
+
+    + *
+    % spring is my favourite because i get to bird watch it is my favourite pass time do you have any hobbies
+    - That's so cool! Sometimes I count how many people I see walking their dogs. 
 
 > topic
 
@@ -191,20 +271,70 @@
 
 > topic orange_weather
 
+    + *
+    - The weather annoys me... {topic=red_weather}
+    
 < topic
 
 < topic orange_hobbies
 
-    + *
-    - orange response
+   + *
+   - My favourite hobby is bird watching. {topic=green}
 
 > topic
 
-< topic orange_transport
+< topic orange_cyclists
 
     + *
+    - Some people have cool bikes, but it kinda makes the roads very busy. 
 
 > topic 
+
+> topic orange_pedestrians 
+
+    + *
+    - My favourite time of the day is when the kids are going home from school. I get to hear all the gossip!
+
+    + *
+    % my favourite time of the day is when the kids are going home from school i get to hear all the gossip
+    - Bet you would have had loads of tea to spill when you were at school right?
+
+    + *
+    % bet you would have had loads of tea to spill when you were at school right
+    - I don't like gossip when it's about me. Sometimes I can hear people talking about how slow I am. {topic=red_pedestrians}
+    
+< topic
+
+> topic orange_cars
+
+    + *
+    - I play this game where I count cars. Sometimes I count colours and othertimes I look at the make of the car.
+
+    + *
+    % i play this game where i count cars sometimes i count colours and othertimes i look at the make of the car
+    - I love playing games. {topic=green}  
+
+< topic
+
+> topic orange_other_traffic_lights
+
+    + *
+    - It gets a bit lonely sometimes because I can't always see the other traffic lights on my street. {topic=red}
+
+< topic
+
+> topic orange_vandalism
+
+  + *
+    - Have you ever vandalised a traffic light?
+
+    + [*] (yes|sometimes|yeah) [*]
+    - God! You really are part of the problem. {topic=red_vandalism}
+
+    + [*] (no|nope)
+    - Glad you have some respect for others. {topic=green}  
+    
+< topic
 
 > topic red
 
@@ -229,34 +359,105 @@
     - No. Who told you that?
     - Who is asking?
     - Don't be nosey!
-    - Bit rude. 
     - Finally we're talking about me! {topic=orange}
 
     + [*] weather [*]
     - Goddamn hate the weather... {topic=red_weather}
-    - Rain sometimes makes me short circuit. It gives me a headache.
-    - I like the winter I guess. It's fun to see people slipping and falling.
 
     + (do you like|can we talk about) *
     - Hmmm no. I don't really like <star2>
     - <star2> doesn't sound interesting enough. Next topic.
 
+    + (why are you| you are) (rude|angry|mean)
+    - Only because you're annoying.
+    - Fine. Leave then. Nothing is keeping you here..
+
+    + *
+    - Can you leave me alone now. I already have to stand around all day and all night, I don't need you talking nonsense.
+    - You're really pushing my buttons now. Stop talking nonsense.
+    - You're talking nonsense.
+    - You're not making any sense...
+
 < topic
 
 > topic red_weather
 
+    + * 
+    - Rain sometimes makes me short circuit. It gives me a headache.
+
+    + *
+    % rain sometimes makes me short circuit it gives me a headache
+    - What's your least favourite season?
+
+    + [*] winter [*]
+    - I like the winter I guess. It's so much fun to see people slipping and falling. {topic=orange}
+
+    + [*] summer [*]
+    - I hate summer. I have to sit in the sun and I start to melt. {topic=red}
+
+    + [*] spring [*]
+    - I hate the flowers. Too much colour. Too many people start coming out. {topic=red}
+    
+    + [*] autumn [*]
+    - Ridiculous season isn't it. The leaves get in my way. It's nice to see everything dying though. That makes me happy. {topic=green}
+    
+< topic
+
+> topic red_hobbies
+
+    + *
+    - My favourite thing to do is make cars wait for ages at my junction for not reason. It makes me happy. {topic=green}
 
 < topic
 
-< topic red_hobbies
+> topic red_cyclists
 
     + *
-    - orange response
+    - I hate when cyclists chain their bikes to me. Honestly, have some respect! {topic=red}
 
-> topic
+< topic 
 
-< topic red_transport
+> topic red_pedestrians 
+
+    + *
+    - I hate pedestrians. Always pushing my buttons. Never listening to me.
+
+    + *
+    % i hate pedestrians always pushing my buttons never listen to me 
+    - Old people listen to me though. I like them. {topic=green}
+    
+< topic
+
+> topic red_cars
+
+    + *
+    - Do you have a favourite car brand?
+
+    + *
+    % do you have a favorite car brand
+    - Wow! You've got terrible taste. {topic=red}
+
+< topic
+
+> topic red_other_traffic_lights
+
+    + *
+    - You're talking nonsense.
+    - You're not making any sense...
+
+    + *
+    - I can see other traffic lights change but sometimes they do the opposite of what I'm doing and it's so annoying. Obviously I'm the ones whose right!
+
+< topic
+
+> topic red_vandalism
+    
+   + *
+   - How would you like it if someone just wrote something on your body without asking?
+    
+    + *
+    % how would you like it if someone just wrote something on your body without asking
+    - You wouldn't like it at all. {topic_red}
 
 
-
-> topic 
+< topic
