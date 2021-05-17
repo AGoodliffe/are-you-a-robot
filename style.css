@@ -8,7 +8,8 @@
 }
 
 body {
-  background: #f2f2f2;
+  background-image: url("/images/traffic\ light.jpeg");
+  background-size: contain;
 }
 
 .title {
