@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
 
 * {
-  font-family: "Inter", Arial;
+  font-family: "Courier New", Courier, monospace;
   font-size: 12pt;
   margin: 0;
   box-sizing: border-box;
@@ -21,7 +21,7 @@ body {
 
 .title h1 {
   letter-spacing: 0.75px;
-  color: blueviolet;
+  color: red;
 }
 
 .wrapper {
@@ -30,7 +30,7 @@ body {
 
 .chat {
   background: white;
-  box-shadow: 10px 10px 0px blueviolet;
+  box-shadow: 10px 10px 0px red
   overflow: scroll;
   height: 100%;
   display: flex;
@@ -66,6 +66,7 @@ body {
   margin-right: auto;
   background: black;
   color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif
 }
 
 .messages .self {
