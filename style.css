@@ -64,7 +64,7 @@ body {
 }
 
 .messages div a:hover {
-  color: blueviolet;
+  color: grey;
 }
 
 .messages .bot {
@@ -80,8 +80,8 @@ body {
   margin-right: 20px;
   margin-left: auto;
   background: white;
-  border: 1px solid blueviolet;
-  color: blueviolet;
+  border: 1px solid grey;
+  color: grey;
 }
 
 .actions {
