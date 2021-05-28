@@ -179,7 +179,7 @@
 
     + *
     % i love to people watch do you
-    - So many interesting people walk past me. I get to look at their clothes and listen to their conversations.
+    - So many interesting people walk past me. I get to look at their clothes and listen to their conversations. {topic=green}
 
 < topic
 
@@ -198,14 +198,14 @@
 
     + *
     % what is your favourite classic car
-    - Cool! I like Volkswagen Beetles too.
+    - Cool! I like Volkswagen Beetles too. {topic=green}
 
 < topic
 
 > topic green_other_traffic_lights
 
     + *
-    - Imitation is the sincerest form of flattery so I love it when I can see the other traffic lights copying me! 
+    - Imitation is the sincerest form of flattery so I love it when I can see the other traffic lights copying me! {topic=green}
     
 < topic
 
@@ -234,7 +234,7 @@
 
     + *
     % spring is my favourite because i get to bird watch it is my favourite pass time do you have any hobbies
-    - That's so cool! Sometimes I count how many people I see walking their dogs. 
+    - That's so cool! Sometimes I count how many people I see walking their dogs. Some of the dog pee on me though... {topic=orange}
 
 > topic
 
@@ -242,7 +242,7 @@
 > topic orange 
 
     + [*] (hello|hi|hey|whats up|heya|hiya) [*]
-    - Yeah... hi. Tell me your name then!
+    - Hi. Tell me your name then!
 
    + [*] (bye|goodbye|see you) [*]    
    - Oh ok... Bye then!
@@ -289,7 +289,7 @@
 < topic orange_cyclists
 
     + *
-    - Some people have cool bikes, but it kinda makes the roads very busy. 
+    - Some people have cool bikes, but it kinda makes the roads very busy. {topic=red}
 
 > topic 
 
@@ -449,7 +449,7 @@
     - You're not making any sense...
 
     + *
-    - I can see other traffic lights change but sometimes they do the opposite of what I'm doing and it's so annoying. Obviously I'm the ones whose right!
+    - I can see other traffic lights change but sometimes they do the opposite of what I'm doing and it's so annoying. Obviously I'm the ones who is right! {topic=red}
 
 < topic
 
