@@ -67,20 +67,22 @@
 // + why do you sound so rude
 // - THEN DONT TALK TO ME!
 
+
+
+
+
+// ------------------------------- initialising question --------------------------------------
+
 + [*] (hello|hi|hey|whats up|heya|hiya) [*]
 - First things first. Have you ever jaywalked? {topic=jaywalking_initialising}
+
+// -------------------------------------- testing ---------------------------------------------- 
 
 + red
 - This is sending you to the red topic {topic=red}
 
 + green
 - This is sending you to the green topic {topic=green}
-// - Sorry did not get what you said
-// - I am afraid that I can not understand you
-// - Sorry can you please elaborate that for me
-// - I don't get it!
-// - You're talking nonsense.
-// - You're not making any sense...
 
 + orange ped
 - Sending you to orange pedestrians {topic=orange_pedestrians}
@@ -108,7 +110,7 @@
     + [*] (no|nope|never) [*]
     - Wow! I'm so happy you said that! {topic=green}
     
-    + [*] (sometimes|maybe|occasionally) [*]
+    + [*] (sometimes|maybe|occasionally|*) [*]
     - Hmm... maybe you shouldn't do that... {topic=orange}
 
 < topic
@@ -120,6 +122,14 @@
     - How you doing these days?
     - Hello, what is your name?
 
+// get this to save the user's name
+    // + *
+    // % Hello, what is your name?
+    // - alice needs to sort this out later 
+
+    + my name is *
+    - <set name = <star>> Nice to meet you, <get name>
+
     + [*] (bye|goodbye|see you) [*]
     - Nice to talk to you! Make sure you look both ways as you leave!
     
@@ -127,16 +137,16 @@
     - Ok, let's talk about the weather {topic=green_weather}
 
     + [*] hobbies [*]
-    - Well, I like bird watching!
-     
+    - I have quite a few hobbies! I'll tell you about one if you fancy it? {topic=green}
 
     + *
-    - I am afraid that I can not understand you
+    - I am afraid I don't understand you. This might be a bit random but have you ever seen stickers put on traffic lights? {topic=green_vandalism}
     - Sorry can you please elaborate that for me
-    - I don't get it!
-    
+    - I'm so sorry, I don't what you're saying! {topic=orange}
+    - I don't understand that but how about we chat about pedestrians? {topic=green_pedestrians}
+
     + are you a robot
-    - That's a really interesting question! I suppose I'm programmed so my lights change.
+    - That's a really interesting question! I suppose I'm programmed so my lights change. 
     - It's funny really... I'm programmed to be a subversive chatbot but I'm based on such a useful object.
 
     + (do you like|can we talk about) *
@@ -198,14 +208,14 @@
 
     + *
     % what is your favourite classic car
-    - Cool! I like Volkswagen Beetles too. {topic=green}
+    - Oh cool! Classic cars are a bit noisey though. They sometimes make me jump! {topic=orange}
 
 < topic
 
 > topic green_other_traffic_lights
 
     + *
-    - Imitation is the sincerest form of flattery so I love it when I can see the other traffic lights copying me! {topic=green}
+    - Imitation is the most sincere form of flattery so I love it when I can see the other traffic lights copying me! {topic=green}
     
 < topic
 
@@ -267,8 +277,8 @@
     - Not really feeling <star2>. Why don't we talk about transport?
 
     + *
-    - I don't get it!
-    - Huh?
+    - I don't get it! {topic=red}
+    - Huh? I don't understand you... {topic=red}
 
 < topic
 
@@ -328,7 +338,7 @@
 
 > topic orange_vandalism
 
-  + *
+    + *
     - Have you ever vandalised a traffic light?
 
     + [*] (yes|sometimes|yeah) [*]
@@ -345,6 +355,17 @@
     - Who are you? How did you find me?
     - I just want some peace and quiet... Why are you here?
     - You better have something good to say for disturbing me!
+    - You're really going to try to have a conversion with me without telling me your name?
+
+// this doesn't work... idk why 
+    // + *
+    // % You are really going to try to have a conversion with me without telling me your name
+    // - Well... tell me your name then.
+    
+    + my name is *
+    - <set name = <star>> <get name> isn't a very unique name.
+    - <set name = <star>> Have you ever thought about changing your name, <get name>?
+    - <set name = <star>> Do you ever stop talking about yourself?
 
     + [*] (bye|goodbye|see you) [*]
     - Well that was a waste of my time.
@@ -358,9 +379,14 @@
     + [*] sorry [*]
     - Ok, you're good now... just stop pushing my buttons. {topic=green}
 
+    + what is your name 
+    - <get name> == undefined => Why would I tell you my name when you haven't told me yours?
+    - I haven't got one. I'm not real.   
+    - No one bothered to give me a name...
+
     + are you a robot
     - No. Who told you that?
-    - Who is asking?
+    - None of your business frankly.
     - Don't be nosey!
     - Finally we're talking about me! {topic=orange}
 
