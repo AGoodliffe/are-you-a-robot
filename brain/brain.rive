@@ -141,7 +141,7 @@
 
     + *
     - I am afraid I don't understand you. This might be a bit random but have you ever seen stickers put on traffic lights? {topic=green_vandalism}
-    - Sorry can you please elaborate that for me
+    // - Sorry can you please elaborate that for me
     - I'm so sorry, I don't what you're saying! {topic=orange}
     - I don't understand that but how about we chat about pedestrians? {topic=green_pedestrians}
 
@@ -395,7 +395,7 @@
 
     + (do you like|can we talk about) *
     - Hmmm no. I don't really like <star2>
-    - <star2> doesn't sound interesting enough. Next topic.
+    - <star2> doesn't sound interesting enough. 
 
     + (why are you| you are) (rude|angry|mean)
     - Only because you're annoying.
