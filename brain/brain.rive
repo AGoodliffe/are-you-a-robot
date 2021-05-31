@@ -100,7 +100,7 @@
 - sending you to green cars topic {topic=green_cars}
 
 + what do you look like
-- <img scr="../images/Traffic_Light.jpg">
+- <img src="../images/Traffic_Light.jpg">
 
 > topic jaywalking_initialising
 

@@ -1,7 +1,7 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"); */
-<style>
+
   @import url("https://use.typekit.net/nel1hvv.css");
-</style>
+
 
 * {
   font-family: roc-grotesk, sans-serif;
@@ -37,7 +37,7 @@ body {
 .chat {
   background: white;
   box-shadow: 10px 10px 0px red
-  overflow: scroll;
+  overflow-y: scroll;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -125,10 +125,9 @@ input:focus {
   }
 } 
 
-/* not working yet */
-<img src="/images/Traffic_Light.jpg" alt="Traffic Light" style="width:128px;height:128px;">
 
-image {
+img {
+  img src="/images/Traffic_Light.jpg" alt="Traffic Light" style="width:128px;height:128px;"
   display: block;
   margin-left: auto;
   margin-right: auto;
