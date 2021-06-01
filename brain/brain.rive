@@ -73,31 +73,31 @@
 
 // ------------------------------- initialising question --------------------------------------
 
-+ [*] (hello|hi|hey|whats up|heya|hiya) [*]
++ *
 - First things first. Have you ever jaywalked? {topic=jaywalking_initialising}
 
 // -------------------------------------- testing ---------------------------------------------- 
 
-+ red
-- This is sending you to the red topic {topic=red}
+// + red
+// - This is sending you to the red topic {topic=red}
 
-+ green
-- This is sending you to the green topic {topic=green}
+// + green
+// - This is sending you to the green topic {topic=green}
 
-+ orange ped
-- Sending you to orange pedestrians {topic=orange_pedestrians}
+// + orange ped
+// - Sending you to orange pedestrians {topic=orange_pedestrians}
 
-+ green bike
-- Sending you to green bike {topic=green_cyclists}
+// + green bike
+// - Sending you to green bike {topic=green_cyclists}
 
-+ red weather
-- Sending you to red weather topic {topic=red_weather}
+// + red weather
+// - Sending you to red weather topic {topic=red_weather}
 
-+ green van
-- Sending you to green vandalism {topic=green_vandalism}
+// + green van
+// - Sending you to green vandalism {topic=green_vandalism}
 
-+ green car
-- sending you to green cars topic {topic=green_cars}
+// + green car
+// - sending you to green cars topic {topic=green_cars}
 
 + what do you look like
 - <img src="../images/Traffic_Light.jpg">
@@ -110,7 +110,7 @@
     + [*] (no|nope|never) [*]
     - Wow! I'm so happy you said that! {topic=green}
     
-    + [*] (sometimes|maybe|occasionally|*) [*]
+    + [*] (sometimes|maybe|occasionally) [*]
     - Hmm... maybe you shouldn't do that... {topic=orange}
 
 < topic
@@ -140,7 +140,7 @@
     - I have quite a few hobbies! I'll tell you about one if you fancy it? {topic=green}
 
     + *
-    - I am afraid I don't understand you. This might be a bit random but have you ever seen stickers put on traffic lights? {topic=green_vandalism}
+    - I am afraid I don't understand you. This might be a bit random but let's talk about those stickers people put on traffic lights {topic=green_vandalism}
     // - Sorry can you please elaborate that for me
     - I'm so sorry, I don't what you're saying! {topic=orange}
     - I don't understand that but how about we chat about pedestrians? {topic=green_pedestrians}
@@ -278,7 +278,8 @@
 
     + *
     - I don't get it! {topic=red}
-    - Huh? I don't understand you... {topic=red}
+    - Huh? I don't understand what you want to talk about... We'll talk about pedestrians instead. {topic=orange_pedestrians}
+    - You don't make sense. This is confusing. You're giving me a headache. I'm going to short circuit if you keep going! {topic=red}
 
 < topic
 
@@ -403,9 +404,8 @@
 
     + *
     - Can you leave me alone now. I already have to stand around all day and all night, I don't need you talking nonsense.
-    - You're really pushing my buttons now. Stop talking nonsense.
-    - You're talking nonsense.
-    - You're not making any sense...
+    - You're really pushing my buttons now. Stop talking bothering me.
+    - You're not making any sense... You can talk to me about the weather. Try anything else and I'll leave. {topic=red_weather}
 
 < topic
 
@@ -419,7 +419,7 @@
     - What's your least favourite season?
 
     + [*] winter [*]
-    - I like the winter I guess. It's so much fun to see people slipping and falling. {topic=orange}
+    - I like the winter. It's so much fun to see people slipping and falling on ice. {topic=orange}
 
     + [*] summer [*]
     - I hate summer. I have to sit in the sun and I start to melt. {topic=red}

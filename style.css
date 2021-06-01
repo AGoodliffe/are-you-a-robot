@@ -36,7 +36,7 @@ body {
 
 .chat {
   background: white;
-  box-shadow: 10px 10px 0px red
+  /* box-shadow: 10px 10px 0px grey; */
   overflow-y: scroll;
   height: 100%;
   display: flex;
