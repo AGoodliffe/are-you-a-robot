@@ -122,7 +122,7 @@
     - How you doing these days?
     - Hello, what is your name?
 
-// get this to save the user's name
+    // get this to save the user's name
     // + *
     // % Hello, what is your name?
     // - alice needs to sort this out later 
@@ -144,6 +144,8 @@
     // - Sorry can you please elaborate that for me
     - I'm so sorry, I don't what you're saying! {topic=orange}
     - I don't understand that but how about we chat about pedestrians? {topic=green_pedestrians}
+    - Not sure I can talk about that topic but how about I tell you about my hobbies? {topic=green_hobbies}
+    - No idea what you mean there. My apologies. How do you get around most of the time?
 
     + are you a robot
     - That's a really interesting question! I suppose I'm programmed so my lights change. 
@@ -152,6 +154,21 @@
     + (do you like|can we talk about) *
     // - Oh my gosh! I love <star2>
     - <star2>! So cool! I love bikes too! Do you cycle? {topic=green_cyclists}
+
+    + [*] (bike|cycle|cycling|bicycle) [*]
+    - Oh! You cycle! {topic=green_cyclists}
+
+    + [*] (walk|foot|pedestrian) [*]
+    - Ahhh, you walk a lot! {topic=green_pedestrians}
+
+    + [*] ( bus|public transport) [*]
+    - I hate busses. They always block my view! {topic=red}
+
+    + [*] (car|automobile|drive) [*]
+    - Oh so you drive... {topic=green_cars}
+
+    + what do you look like
+    - I look like the image on the right. But with more vandalism at the moment.. {topic=red_vandalism}
 
 < topic
 
@@ -171,10 +188,6 @@
     % sometimes cyclists do not listen to me
     - I'm here for a reason! It's not safe to ignore me like that. {topic=red}
 
-    + *
-    - I am afraid that I can not understand you
-    - Sorry can you please elaborate that for me
-    - I don't get it!
 
 < topic 
 
@@ -240,7 +253,7 @@
 < topic green_hobbies
 
     + *
-    - Spring is my favourite because I get to bird watch. It's my favourite pass time. Do you have any hobbies?
+    - Spring might be my favourite season because I get to bird watch. It's my favourite pass time. Do you have any hobbies?
 
     + *
     % spring is my favourite because i get to bird watch it is my favourite pass time do you have any hobbies
@@ -267,14 +280,20 @@
 
     + [*] weather [*]
     - Ok, let's talk about the weather {topic=orange_weather}
+
+    + [*] (bike|cycle|cycling|bicycle) [*]
+    - Ah I see, you cycle then... {topic=orange_cyclists}
+
+    + [*] (hobby|hobbies|past time|spare time) [*]
+    - I have lots of hobbies {topic=orange_hobbies}
    
-   + are you a robot
+    + are you a robot
     - I'm just a traffic light!
     - I guess some people would say I am!
 
     + (do you like|can we talk about) *
     - Sometimes I like <star2>
-    - Not really feeling <star2>. Why don't we talk about transport?
+    - Not really feeling <star2>. Why don't we talk about transport? {topic=orange_cars}
 
     + *
     - I don't get it! {topic=red}
@@ -293,7 +312,7 @@
 < topic orange_hobbies
 
    + *
-   - My favourite hobby is bird watching. {topic=green}
+   - I love bird watching. It calms me down. {topic=green}
 
 > topic
 
