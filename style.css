@@ -127,7 +127,7 @@ input:focus {
 
 
 img {
-  img src="/images/Traffic_Light.jpg" alt="Traffic Light" style="width:128px;height:128px;"
+  img src="../images/Traffic_Light.jpg" alt="Traffic Light" style="width:128px;height:128px;"
   display: block;
   margin-left: auto;
   margin-right: auto;
