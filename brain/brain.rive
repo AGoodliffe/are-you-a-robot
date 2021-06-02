@@ -99,6 +99,12 @@
 // + green car
 // - sending you to green cars topic {topic=green_cars}
 
++ green ped
+- sending you to green ped topic {topic=green_pedestrians}
+
++ green hob 
+- sending you to green hobbies topic {topic=green_hobbies}
+
 + what do you look like
 - <img src="../images/Traffic_Light.jpg">
 
@@ -137,12 +143,12 @@
     - Ok, let's talk about the weather {topic=green_weather}
 
     + [*] hobbies [*]
-    - I have quite a few hobbies! I'll tell you about one if you fancy it? {topic=green}
+    - I have quite a few hobbies! I'll tell you about one if you fancy it? {topic=green_hobbies}
 
     + *
     - I am afraid I don't understand you. This might be a bit random but let's talk about those stickers people put on traffic lights {topic=green_vandalism}
     // - Sorry can you please elaborate that for me
-    - I'm so sorry, I don't what you're saying! {topic=orange}
+    - I'm so sorry, I don't know what you're saying! {topic=orange}
     - I don't understand that but how about we chat about pedestrians? {topic=green_pedestrians}
     - Not sure I can talk about that topic but how about I tell you about my hobbies? {topic=green_hobbies}
     - No idea what you mean there. My apologies. How do you get around most of the time?
@@ -250,16 +256,16 @@
 < topic
 
 
-< topic green_hobbies
+> topic green_hobbies
 
     + *
     - Spring might be my favourite season because I get to bird watch. It's my favourite pass time. Do you have any hobbies?
 
     + *
-    % spring is my favourite because i get to bird watch it is my favourite pass time do you have any hobbies
+    % spring might be my favourite season because i get to bird watch it is my favourite pass time do you have any hobbies
     - That's so cool! Sometimes I count how many people I see walking their dogs. Some of the dog pee on me though... {topic=orange}
 
-> topic
+< topic
 
 
 > topic orange 
@@ -267,11 +273,11 @@
     + [*] (hello|hi|hey|whats up|heya|hiya) [*]
     - Hi. Tell me your name then!
 
-   + [*] (bye|goodbye|see you) [*]    
-   - Oh ok... Bye then!
-   - See you around.
+    + [*] (bye|goodbye|see you) [*]    
+    - Oh ok... Bye then!
+    - See you around.
 
-   + thank you
+    + thank you
     - You are welcome
     - Welcome
     - No problem
@@ -298,6 +304,7 @@
     + *
     - I don't get it! {topic=red}
     - Huh? I don't understand what you want to talk about... We'll talk about pedestrians instead. {topic=orange_pedestrians}
+    - You're making me see red... stop confusing... {topic=red}
     - You don't make sense. This is confusing. You're giving me a headache. I'm going to short circuit if you keep going! {topic=red}
 
 < topic
@@ -448,6 +455,7 @@
     
     + [*] autumn [*]
     - Ridiculous season isn't it. The leaves get in my way. It's nice to see everything dying though. That makes me happy. {topic=green}
+
     
 < topic
 
@@ -471,7 +479,7 @@
     - I hate pedestrians. Always pushing my buttons. Never listening to me.
 
     + *
-    % i hate pedestrians always pushing my buttons never listen to me 
+    % i hate pedestrians always pushing my buttons never listening to me 
     - Old people listen to me though. I like them. {topic=green}
     
 < topic
@@ -505,7 +513,7 @@
     
     + *
     % how would you like it if someone just wrote something on your body without asking
-    - You wouldn't like it at all. {topic_red}
+    - You wouldn't like it at all. {topic=red}
 
 
 < topic
