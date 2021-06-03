@@ -152,6 +152,7 @@
     - I don't understand that but how about we chat about pedestrians? {topic=green_pedestrians}
     - Not sure I can talk about that topic but how about I tell you about my hobbies? {topic=green_hobbies}
     - No idea what you mean there. My apologies. How do you get around most of the time?
+    - Do you want to know a secret? {topic=green_other_traffic_lights}
 
     + are you a robot
     - That's a really interesting question! I suppose I'm programmed so my lights change. 
@@ -168,7 +169,7 @@
     - Ahhh, you walk a lot! {topic=green_pedestrians}
 
     + [*] ( bus|public transport) [*]
-    - I hate busses. They always block my view! {topic=red}
+    - I hate buses. They always block my view! {topic=red}
 
     + [*] (car|automobile|drive) [*]
     - Oh so you drive... {topic=green_cars}
@@ -304,8 +305,11 @@
     + *
     - I don't get it! {topic=red}
     - Huh? I don't understand what you want to talk about... We'll talk about pedestrians instead. {topic=orange_pedestrians}
+    - Huh? I don't understand what you want to talk about... We'll talk about cars instead. {topic=red_cars}
     - You're making me see red... stop confusing... {topic=red}
     - You don't make sense. This is confusing. You're giving me a headache. I'm going to short circuit if you keep going! {topic=red}
+    - You don't make any sense. Let's talk about graffiti. {topic=orange_vandalism}
+    - Do you want to know a secret? {topic=orange_other_traffic_lights}
 
 < topic
 
@@ -359,7 +363,7 @@
 > topic orange_other_traffic_lights
 
     + *
-    - It gets a bit lonely sometimes because I can't always see the other traffic lights on my street. {topic=red}
+    - It gets a bit lonely sometimes because I can't always see the other traffic lights on my street. {topic=red_other_traffic_lights}
 
 < topic
 
@@ -430,8 +434,11 @@
 
     + *
     - Can you leave me alone now. I already have to stand around all day and all night, I don't need you talking nonsense.
-    - You're really pushing my buttons now. Stop talking bothering me.
+    - You're really pushing my buttons now. {topic=red_pedestrians}
+    - Stop bothering me.
     - You're not making any sense... You can talk to me about the weather. Try anything else and I'll leave. {topic=red_weather}
+    - Do you know what makes me really mad... {topic=red_cyclists}
+    - Do you know what makes me really happy... {topic=red_hobbies}
 
 < topic
 
