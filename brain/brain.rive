@@ -111,7 +111,7 @@
 > topic jaywalking_initialising
 
     + [*] (yes|yeah|yup|do) [*]
-    - You are the bane of my excistence. {topic=red}
+    - You are the bane of my existence. {topic=red}
 
     + [*] (no|nope|never) [*]
     - Wow! I'm so happy you said that! {topic=green}
@@ -263,7 +263,7 @@
 
     + *
     % spring might be my favourite season because i get to bird watch it is my favourite pass time do you have any hobbies
-    - That's so cool! Sometimes I count how many people I see walking their dogs. Some of the dog pee on me though... {topic=orange}
+    - That's so cool! Sometimes I count how many people I see walking their dogs. Some of the dogs pee on me though... {topic=orange}
 
 < topic
 
