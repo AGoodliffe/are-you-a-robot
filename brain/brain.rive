@@ -147,7 +147,6 @@
 
     + *
     - I am afraid I don't understand you. This might be a bit random but let's talk about those stickers people put on traffic lights {topic=green_vandalism}
-    // - Sorry can you please elaborate that for me
     - I'm so sorry, I don't know what you're saying! {topic=orange}
     - I don't understand that but how about we chat about pedestrians? {topic=green_pedestrians}
     - Not sure I can talk about that topic but how about I tell you about my hobbies? {topic=green_hobbies}
@@ -168,7 +167,7 @@
     + [*] (walk|foot|pedestrian) [*]
     - Ahhh, you walk a lot! {topic=green_pedestrians}
 
-    + [*] ( bus|public transport) [*]
+    + [*] (bus|public transport) [*]
     - I hate buses. They always block my view! {topic=red}
 
     + [*] (car|automobile|drive) [*]
