@@ -497,7 +497,7 @@
     - Do you have a favourite car brand?
 
     + *
-    % do you have a favorite car brand
+    % do you have a favourite car brand
     - Wow! You've got terrible taste. {topic=red}
 
 < topic
