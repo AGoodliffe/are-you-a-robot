@@ -503,9 +503,9 @@
 
 > topic red_other_traffic_lights
 
-    + *
-    - You're talking nonsense.
-    - You're not making any sense...
+    // + *
+    // - You're talking nonsense.
+    // - You're not making any sense...
 
     + *
     - I can see other traffic lights change but sometimes they do the opposite of what I'm doing and it's so annoying. Obviously I'm the ones who is right! {topic=red}
